@@ -1,0 +1,100 @@
+body {
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+}
+
+#generator {
+    width: 550px;
+    height: 550px;
+    background-color: white;
+
+}
+
+header {
+    padding: 1rem;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+}
+
+input, select, button {
+    color: #374151;
+}
+
+input#color {
+    width: 51px;
+    height:34px;
+    padding: 0;
+    border: none;
+}
+
+
+select#scheme {
+flex-grow: 1;
+margin: 0 1rem;
+padding: 0 .25rem;
+border: 1px solid #D1D5DB;
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+border-radius: 6px;
+}
+
+button {
+    background: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 0 1rem;
+}
+
+#color-bars {
+    display: flex;
+    height: 100%;
+
+}
+
+.bar {
+    background: yellow;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+#bar-1 {
+    background-color: #F55A5A;
+}
+#bar-2 {
+    background-color: #2B283A;
+}
+#bar-3 {
+    background-color: #FBF3AB;
+}
+#bar-4 {
+    background-color: #AAD1B6;
+    ;
+}
+#bar-5 {
+    background-color: #A626D3;
+
+}
+
+.hex {
+    background-color: #fff;
+    padding: 1rem;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    color: #2B283A;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+}
