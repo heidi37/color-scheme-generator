@@ -12,41 +12,41 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script src="app.js"></script>
   </head>
   <body>
     <div id="generator">
       <header>
         <form>
-          <input type="color" id="color" name="color" />
+          <input type="color" id="color" name="color" value="#F55A5A" />
           <select id="scheme" name="scheme">
             <option value="monochrome">Monochrome</option>
             <option value="monochrome-dark">Monochrome Dark</option>
             <option value="monochrome-light">Monochrome Light</option>
             <option value="analogic">Analogic</option>
             <option value="analogic-complement">Analogic-complement</option>
-            <option value="triad">Rriad</option>
+            <option value="triad">Triad</option>
           </select>
           <button>Get color scheme</button>
         </form>
       </header>
       <div id="color-bars">
+        <div id="bar-0" class="bar">
+          <div id="hex-0" class="hex">#555555</div>
+        </div>
         <div id="bar-1" class="bar">
-          <div id="hex-1" class="hex">#555555</div>
+          <div id="hex-1" class="hex">#ff00ff</div>
         </div>
         <div id="bar-2" class="bar">
-          <div id="hex-2" class="hex">#ff00ff</div>
+          <div id="hex-2" class="hex">#333333</div>
         </div>
         <div id="bar-3" class="bar">
-          <div id="hex-3" class="hex">#333333</div>
+          <div id="hex-3" class="hex">#000000</div>
         </div>
         <div id="bar-4" class="bar">
-          <div id="hex-4" class="hex">#000000</div>
-        </div>
-        <div id="bar-5" class="bar">
-          <div id="hex-5" class="hex">#ffffff</div>
+          <div id="hex-4" class="hex">#ffffff</div>
         </div>
       </div>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
