@@ -34,7 +34,6 @@ input#color {
     border: none;
 }
 
-
 select#scheme {
 flex-grow: 1;
 margin: 0 1rem;
@@ -62,29 +61,11 @@ button {
 }
 
 .bar {
-    background: yellow;
+    background: #9e9b9b;
     width: 20%;
     display: flex;
     justify-content: center;
     align-items: end;
-}
-
-#bar-0 {
-    background-color: #F55A5A;
-}
-#bar-1 {
-    background-color: #2B283A;
-}
-#bar-2 {
-    background-color: #FBF3AB;
-}
-#bar-3 {
-    background-color: #AAD1B6;
-    ;
-}
-#bar-4 {
-    background-color: #A626D3;
-
 }
 
 .hex {

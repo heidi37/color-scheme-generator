@@ -1,29 +1,38 @@
 const button = document.querySelector("button");
 const color = document.querySelector("#color");
 const scheme = document.querySelector("#scheme");
-const bar0 = document.querySelector("#bar-0");
+const hexColorText = document.querySelectorAll(".hex");
 
-
-console.log(button);
-console.log(color.value);
-console.log(scheme.value);
+fetch(`https://www.thecolorapi.com/scheme?hex=ffffff&mode=monochrome&count=5`, {method: "GET"})
+        .then(response => response.json())
+        .then(data => {
+                for(let i = 0; i < 5; i++)
+                {
+                    document.querySelector(`#bar-${i}`).style.backgroundColor = data.colors[i].hex.value;
+                    document.querySelector(`#hex-${i}`).innerHTML = data.colors[i].hex.value;
+                }
+            });
 
 button.addEventListener("click", function(e){
-    e.preventDefault()
+    e.preventDefault();
     const apiColor = color.value.slice(1);
     const apiScheme = scheme.value;
-    console.log(color.value.slice(1))
-    console.log(scheme.value);
     fetch(`https://www.thecolorapi.com/scheme?hex=${apiColor}&mode=${apiScheme}&count=5`, {method: "GET"})
         .then(response => response.json())
         .then(data => {
-                console.log(data.colors[0].hex.value)
-                bar0.style.backgroundColor = data.colors[0].hex.value;
-                // for(let i = 0; i < 5; i++)
-                // {
-                //     // document.querySelector("#bar-[i]").style.backgroundColor = data.colors[i].hex.value;
+                for(let i = 0; i < 5; i++)
+                {
+                    document.querySelector(`#bar-${i}`).style.backgroundColor = data.colors[i].hex.value;
+                    document.querySelector(`#hex-${i}`).innerHTML = data.colors[i].hex.value;
+                }
+            });
+});
 
-                // }
-            })
-
-})
+hexColorText.forEach(item => {
+item.addEventListener("click", function() {
+    let text = item.textContent;
+	navigator.clipboard.writeText(`${text}`);
+    setTimeout(async()=>alert(
+        await `${text} copied to clipboard!`), 1000);
+    });
+});
